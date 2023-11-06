@@ -1,0 +1,15 @@
+
+.CardMovie{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    padding-top: 10px;
+    background-color: #eeead6;
+    font-size: 20px;
+}
+.Img{
+    width: 90%;
+}

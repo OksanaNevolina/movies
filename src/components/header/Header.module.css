@@ -1,0 +1,38 @@
+.Header{
+    height: 80px;
+    width: 100%;
+    background-color: #2310cb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+.Navlink{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    font-size: 40px;
+    font-weight: bold;
+
+
+}
+.Navlink a{
+    text-decoration: none;
+    color: cornsilk;
+}
+.Navlink a[class = 'active']{
+    color: red;
+
+}
+.Logo{
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+
+}.User{
+    font-size: 30px;
+    margin-right: 20px;
+
+}
