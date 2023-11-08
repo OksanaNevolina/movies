@@ -24,7 +24,6 @@ const router = createBrowserRouter([
                 path:'movie/:movie_id/images',
                 element:<PosterPreview/>
             },
-
             {
               path:'genres' ,
               element:<PageGenres/>

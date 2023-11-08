@@ -16,6 +16,14 @@
 
 
 }
+.MovieById button{
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+    background-color: darkgray;
+    color: #000;
+    border-radius: 10px;
+}
 .info{
     width: 60%;
     display: flex;

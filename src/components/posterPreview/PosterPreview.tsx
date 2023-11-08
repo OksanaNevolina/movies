@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {moviesService} from "../../services";
 import {Photo} from "../Photo";
+import css from './PosterPreview.module.css'
 
 
 const PosterPreview = () => {
@@ -14,7 +15,7 @@ const PosterPreview = () => {
     console.log(photos)
     
     return (
-        <div>
+        <div className={css.PosterPhoto}>
             <div>{photos.map((photo,index)=><Photo key={index} img={photo}/>)}</div>
         </div>
     );

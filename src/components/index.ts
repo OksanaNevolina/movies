@@ -6,3 +6,6 @@ export * from './starsRating'
 export * from './movieInfo'
 export * from './genreBadge'
 export * from './userInfo'
+export * from './Photo'
+export * from './GenresInfo'
+

@@ -1,0 +1,14 @@
+
+.GenreDiv{
+
+    text-align: center;
+    font-size: 50px;
+    width: 420px;
+    height: 80px;
+    padding: 10px;
+
+
+}
+.GenreDiv:hover{
+    color: #a4b5d0;
+}

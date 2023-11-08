@@ -1,0 +1,11 @@
+.Photo{
+    width: 30%;
+    background-color: #eeff7f;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Photo img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}

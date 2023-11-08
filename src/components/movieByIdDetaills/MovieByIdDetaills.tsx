@@ -16,6 +16,8 @@ const navigate = useNavigate();
     return (
         <div className={css.MovieById}>
             <img  src={urls.poster(poster_path)} alt="original_title" className={css.ImgPoster}/>
+            <button onClick={()=>navigate(`/movie/${id}/images`)}>More posters</button>
+
             <div className={css.info}>
                 <div className={css.original_title}> <b>{original_title}</b></div>
                 <div>{overview}</div>
@@ -27,7 +29,6 @@ const navigate = useNavigate();
                 <div>Release date:{release_date}</div>
                 <div>Duration:{vote_count}</div>
                 <div>Main cast :</div>
-                <button onClick={()=>navigate(`/movie/${id}/images`)}>Main cast</button>
             </div>
 
         </div>

@@ -6,7 +6,7 @@ const movie = '/movie'
 const genre = '/genre'
 const list = '/list'
 const search = '/search'
-const keyword = '/keyword'
+// const keyword = '/keyword'
 const images = '/images'
 const poster:string = 'https://image.tmdb.org/t/p/w500'
 
@@ -22,7 +22,7 @@ const urls = {
 
     },
     genre:():string => `${genre}/${movie}/${list}`,
-    search:():string => `${search}/${keyword}`,
+    search:():string => `${search}/${movie}`,
     poster:(photo:string): string=>`${poster}/${photo}`
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
+import {GenreBadge} from "../components";
 
 const PageGenres = () => {
     return (
         <div>
-            PageGenres
+            <GenreBadge/>
         </div>
     );
 };

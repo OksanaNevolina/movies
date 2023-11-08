@@ -1,0 +1,5 @@
+.PosterPhoto{
+    width: 100%;
+    background-color: #55065e;
+    flex-wrap: wrap;
+}
