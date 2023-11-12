@@ -4,6 +4,9 @@
     border-radius: 10px;
     border: 1px solid black;
 }
+.ImgPoster:hover{
+
+}
 
 
 .MovieById{
@@ -12,7 +15,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #eeff7f;
 
 
 }
@@ -30,7 +32,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #eeff7f;
     font-size: 20px;
     margin: 20px;
 }
@@ -39,4 +40,22 @@
 }
 .original_title{
     font-size: 40px;
+}
+.genre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.genreName{
+    color: #150b6c;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.Cast{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
 }

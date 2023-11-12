@@ -1,7 +1,4 @@
-.PosterDiv{
-
-}
-.PhotoQuery{
+.PhotoF{
     width: 300px;
     height: 500px;
     background-color: #eeff7f;
@@ -14,7 +11,7 @@
     border-radius: 5px;
 
 }
-.PhotoQueryImg{
+.PhotoFImg{
     width: 250px;
     height: 350px;
     margin-top: 10px;

@@ -1,23 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import {useAppLocation} from "../../hooks";
-import {IMovie} from "../../interfaces";
+import {IMovieId} from "../../interfaces";
 import {useParams} from "react-router-dom";
 import {moviesService} from "../../services";
-import {MovieByIdDetaills} from "../movieByIdDetaills/MovieByIdDetaills";
+import {MovieByIdDetaills} from "../movieByIdDetaills";
+
 
 const MovieInfo = () => {
-    const {state} = useAppLocation<IMovie>();
+    // const {state} = useAppLocation<IMovie>();
     const {id} = useParams();
 
-    const [movieDetails,setMovieDetails] = useState<IMovie>(null);
 
+    const [movieDetails,setMovieDetails] = useState<IMovieId>(null);
     useEffect(()=>{
-        if(state){
-            setMovieDetails(state)
-        }else {
-            moviesService.getById(+id).then(({data})=>setMovieDetails(data))
-        }
-    },[])
+        moviesService.getById(+id).then(({data})=>setMovieDetails(data))
+    },[id])
+
     return (
         <div>
             {movieDetails && <MovieByIdDetaills movieDetails={movieDetails}/>}

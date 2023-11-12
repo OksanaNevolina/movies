@@ -5,11 +5,12 @@ import {useSearchParams} from "react-router-dom";
 import {moviesService} from "../../services";
 import css from './MoviesList.module.css'
 
-const MoviesList = () => {
+const  MoviesList = () => {
     const [movies,setMovies] = useState<IMovie[]>([]);
+
+
     const [query,setQuery] = useSearchParams({page : '1'});
     const page:string = query.get('page')
-    console.log(page)
 
     useEffect(()=>{
         moviesService.getAll(page).then(({data})=> setMovies(data.results))
@@ -34,8 +35,8 @@ const MoviesList = () => {
                 {movies.map((movie) =><MoviesListCard key={movie.id} movie={movie} />)}
             </div>
             <div>
-                <button className={css.ButtonPrevNext}  onClick={prev}>prev</button>
-                <button  className={css.ButtonPrevNext}   onClick={next}>next</button>
+                <button className={css.ButtonPrevNext} disabled={!query} onClick={prev}>prev</button>
+                <button  className={css.ButtonPrevNext} disabled={!query}   onClick={next}>next</button>
             </div>
 
         </div>

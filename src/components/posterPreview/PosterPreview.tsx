@@ -15,8 +15,8 @@ const PosterPreview = () => {
     console.log(photos)
     
     return (
-        <div className={css.PosterPhoto}>
-            <div>{photos.map((photo,index)=><Photo key={index} img={photo}/>)}</div>
+        <div >
+            <div className={css.PosterPhoto}>{photos.map((photo,index)=><Photo key={index} img={photo}/>)}</div>
         </div>
     );
 };

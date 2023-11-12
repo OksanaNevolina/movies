@@ -2,22 +2,23 @@ import React, {FC} from 'react';
 import {IMovie} from "../../interfaces";
 import {urls} from "../../constants";
 import {Rating, Typography} from "@mui/material";
-import css from './QueryMovie.module.css'
+
+import css from './FilterMovieList.module.css'
 import {useNavigate} from "react-router-dom";
 
 interface Iprops {
-    movieSearch:IMovie
+    movie:IMovie
 }
 
-const QueryMovie:FC<Iprops> = ({movieSearch}) => {
-    const {id,poster_path,release_date,original_title,vote_average} = movieSearch;
+const FilterMovieList:FC<Iprops> = ({movie}) => {
+    const {id,poster_path,release_date,original_title,vote_average} = movie;
 
     const navigate = useNavigate();
 
     return (
         <div onClick={()=> navigate(`/movies/${id}`)}>
-            <div className={css.PhotoQuery}>
-                <img  src={urls.poster(poster_path)} alt={original_title} className={css.PhotoQueryImg}/>
+            <div className={css.PhotoF}>
+                <img  src={urls.poster(poster_path)} alt={original_title} className={css.PhotoFImg}/>
                 <h4>{original_title}</h4>
                 <div>Release date: {release_date}</div>
                 <div> <b>Rating:</b></div>
@@ -30,5 +31,5 @@ const QueryMovie:FC<Iprops> = ({movieSearch}) => {
 };
 
 export {
-    QueryMovie
+    FilterMovieList
 };

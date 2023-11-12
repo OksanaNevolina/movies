@@ -8,4 +8,6 @@ export * from './genreBadge'
 export * from './userInfo'
 export * from './Photo'
 export * from './GenresInfo'
+export * from './movieByIdDetaills'
+export * from './cast'
 

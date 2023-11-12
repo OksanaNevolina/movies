@@ -1,0 +1,20 @@
+.FilterWrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    align-items: center;
+
+}
+.DivBut button{
+    height: 50px;
+    width: 200px;
+    background-color: #eeff7f;
+    font-size: 40px;
+}
+.DivBut{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

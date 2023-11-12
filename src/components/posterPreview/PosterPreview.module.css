@@ -1,5 +1,8 @@
 .PosterPhoto{
     width: 100%;
-    background-color: #55065e;
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
 }

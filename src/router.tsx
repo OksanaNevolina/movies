@@ -2,6 +2,7 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 import {MainLayount} from "./layount";
 import {PageGenres, PageMovies, PageSearch} from "./pages";
 import {MovieInfo, PosterPreview} from "./components";
+import {MovieFilter} from "./components/movieFilter";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,12 @@ const router = createBrowserRouter([
             {
                 path:'search',
                 element:<PageSearch/>
+            },
+            {
+                path:'genres/:id' ,
+                element:<MovieFilter/>
             }
+
         ]
     }
 ])

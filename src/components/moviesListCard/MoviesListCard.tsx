@@ -10,7 +10,7 @@ interface IProps {
     movie: IMovie
 }
 
-const MoviesListCard:FC<IProps> = ({movie}) => {
+const  MoviesListCard:FC<IProps> = ({movie}) => {
     const {original_title,poster_path,vote_average,id} = movie;
     
 
@@ -18,11 +18,11 @@ const MoviesListCard:FC<IProps> = ({movie}) => {
 
 
     return (
-            <div className={css.CardMovie} onClick={()=> navigate(id.toString(),{state:movie})}>
-                <img className={css.Img} src={urls.poster(poster_path)} alt="original_title"/>
+            <div className={css.CardMovie} onClick={()=> navigate(`${id}`)}>
+                <img className={css.Img} src={urls.poster(poster_path)} alt={original_title}/>
                 <h3>{original_title}</h3>
                 <Typography component="legend"></Typography>
-                <Rating name="read-only" value={vote_average} readOnly  max={10}/>
+                <Rating name="read-only" value={vote_average} readOnly  max={10} defaultValue={2.5} precision={0.5}/>
             </div>
 
     );

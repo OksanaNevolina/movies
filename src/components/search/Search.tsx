@@ -4,10 +4,11 @@ import {useSearchParams} from "react-router-dom";
 import {searchService} from "../../services";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {QueryMovie} from "../queryMovie";
+import css from './Search.module.css'
 
 const Search = () => {
     const [moviesSearch, setMoviesSearch] = useState<IMovie[]>([]);
-    const [queryMovie,setQueryMovie] = useSearchParams({query:'search'});
+    const [queryMovie,setQueryMovie] = useSearchParams({query:'marvel'});
     const query:string = queryMovie.get('query')
     console.log(query)
 
@@ -32,12 +33,13 @@ const getWord:SubmitHandler<IWord>=(qwe) => {
 
 
     return (
-        <div>
-            <form onSubmit={handleSubmit(getWord)}>
+        <div className={css.Search}>
+            <form onSubmit={handleSubmit(getWord)} className={css.SearchForm}>
                 <input type="text" {...register('name')} />
                 <button>Search</button>
             </form>
-            <div>{moviesSearch.map((movieSearch)=><QueryMovie key={movieSearch.id} movieSearch={movieSearch}/>)}</div>
+            <div className={css.SearchMovie}>{moviesSearch.map((movieSearch)=><QueryMovie key={movieSearch.id} movieSearch={movieSearch}/>)}</div>
+
         </div>
     );
 }

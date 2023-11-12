@@ -6,7 +6,7 @@ const movie = '/movie'
 const genre = '/genre'
 const list = '/list'
 const search = '/search'
-// const keyword = '/keyword'
+const credits = '/credits'
 const images = '/images'
 const poster:string = 'https://image.tmdb.org/t/p/w500'
 
@@ -18,6 +18,7 @@ const urls = {
         base:():string => `${discover}/${movie}`,
         byId:(id:number):string => `${movie}/${id}`,
         images:(id:number):string => `${movie}/${id}/${images}`,
+        credits:(id:number):string =>`${movie}/${id}/${credits}`
 
 
     },
