@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {RouterProvider} from "react-router-dom";
 import {router} from "./router";
 import './index.css'
-import {ContextProvider} from "./components/hoc";
+import {ContextProvider} from "./hoc";
 
 
 const root = ReactDOM.createRoot(

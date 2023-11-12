@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import css from './Header.module.css'
 import {UserInfo} from "../userInfo";
 import {Switch} from "@mui/material";
-import {Context} from "../hoc";
+import {Context} from "../../hoc";
 
 const Header = () => {
     const {theme,setTheme} = useContext(Context);
